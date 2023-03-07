@@ -39,6 +39,11 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize + 1);
     }
 
+    /**
+     * Test if hasCity method works
+     * Checks if empty list has list
+     * Adds city then checks if city list has city
+     */
     @Test
     public void hasCityTest() {
         list = MockCityList();
@@ -49,6 +54,12 @@ public class CustomListTest {
 
     }
 
+    /**
+     * Test if deleteCity method works
+     * Add city to list and check if in list
+     * Delete city from list and check if city has list
+     * Check if method throws exception if given city not in list
+     */
     @Test
     public void deleteCityTest() {
         list = MockCityList();
