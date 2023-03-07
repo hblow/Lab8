@@ -71,9 +71,19 @@ public class CustomListTest {
         assertThrows(IllegalArgumentException.class, () -> {list.deleteCity(city);});
     }
 
-    //@Test
-    //public void countCitiesTest() {
-
-   // }
+    /**
+     * Test if countCities method works
+     * Check if initial list contains 0 items
+     * Add city to list
+     * Check if list contains 1 item
+     */
+    @Test
+    public void countCitiesTest() {
+        list = MockCityList();
+        City city = new City("Estevan", "SK");
+        assertEquals(0, list.countCities());
+        list.addCity(city);
+        assertEquals(1, list.countCities());
+    }
 
 }
